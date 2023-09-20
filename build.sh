@@ -8,4 +8,4 @@ pip install -r requirements.txt
 python manage.py collectstatic --no-input
 python manage.py migrate
 
-python manage.py createsuperuser --username usuario --password 04072003 --no-input
+python manage.py createsuperuser --username usuario --no-input
