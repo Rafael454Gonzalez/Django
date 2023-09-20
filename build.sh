@@ -8,4 +8,9 @@ pip install -r requirements.txt
 python manage.py collectstatic --no-input
 python manage.py migrate
 
-python manage.py createsuperuser --username usuario --no-input
+manage.py createsuperuser [-h] [--username USERNAME] [--noinput]
+                                 [--database DATABASE] [--email EMAIL]
+                                 [--version] [-v {0,1,2,3}]
+                                 [--settings SETTINGS]
+                                 [--pythonpath PYTHONPATH] [--traceback]
+                                 [--no-color] [--force-color] [--skip-checks]
