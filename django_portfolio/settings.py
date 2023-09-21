@@ -129,19 +129,20 @@ STATIC_URL = 'static/'
 if not DEBUG:
     # Tell Django to copy statics to the `staticfiles` directory
     # in your application directory on Render.
-    #STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    
-    STATIC_ROOT = os.path.join(dj_database_url, 'staticfiles')
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
     # Turn on WhiteNoise storage backend that takes care of compressing static files
     # and creating unique names for each version so they can safely be cached forever.
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
-#MEDIA_ROOT = BASE_DIR / 'media'
-MEDIA_ROOT = dj_database_url / 'media'
+MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/public/'
 
 # Default primary key field type dj_database_url
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
