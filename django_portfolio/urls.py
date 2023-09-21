@@ -19,7 +19,7 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 from blog import urls
-
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns # new
 from portfolio import views
 
 urlpatterns = [
